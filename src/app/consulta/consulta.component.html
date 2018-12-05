@@ -1,0 +1,15 @@
+<form
+  (submit)="enviar()"
+  [formGroup]="consultaGroup">
+  <section>
+    <label for="">Asunto</label>
+    <input type="text" formControlName="asunto">
+  </section>
+  <section>
+    <label for="">Mensaje</label>
+    <textarea formControlName="mensaje" name="" id="" cols="30" rows="10"></textarea>
+  </section>
+  <section>
+    <button [disabled]="consultaGroup.status === 'INVALID'">Enviar</button>
+  </section>
+</form>
